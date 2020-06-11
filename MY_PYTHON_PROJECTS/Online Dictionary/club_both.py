@@ -8,6 +8,7 @@ user ="ardit700_student",
 password = "ardit700_student",
 host = "108.167.140.122",
 database = "ardit700_pm1database",
+#text just for testing purpose
 )   
 
 cursor = con.cursor()
