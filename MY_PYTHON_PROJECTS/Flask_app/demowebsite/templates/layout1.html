@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Flask App</title>
+      <!-- we declare the type of the file we linking to and then we put the link of the file -->
+      <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+  </head>
+
+  <body>
+    <header>
+      <!--we will use this class name 'container' to  refer from CSS code> -->
+      <div class="container">
+        <h1 class="logo">Surabhi's Web Application</h1>
+        <strong><nav>
+          <ul class="menu">
+            <!--homepage and about_Me function will be triggered when user clicks Home/ About > -->
+            <li><a href="{{ url_for('homepage') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+    <div class="container">
+      <!-- template inheritance, layout.html is base template, homepage and about_Me are child templates. These child templates
+    will fill in the block below  -->
+        {%block content%}
+        {%endblock%}
+    </div>
+  </body>
+</html>
